@@ -1,3 +1,7 @@
+import os
+
+os.environ["R_HOME"] = "/usr/local/bin/R"
+
 import streamlit as st
 import rpy2.robjects as ro
 
@@ -6,7 +10,7 @@ def main():
     ro.r(
         """
         print_hello_world <- function() {
-            return("Hello World!")
+            return("Hello World!")  
         }
     """
     )
